@@ -25,3 +25,7 @@ The stubs are never autoloaded, so nothing changes at runtime: under Tenma the r
 ```bash
 tenma --stubs > tenma.php
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE).

@@ -3,6 +3,12 @@
     "description": "Stubs of Tenma's PHP API (Tenma::serve(), Tenma\\Http, Tenma\\Fs, ...) for IDEs and PHPStan",
     "type": "library",
     "keywords": ["tenma", "stubs", "ide-helper", "phpstan", "async", "fibers"],
+    "license": "MIT",
+    "homepage": "https://tenma.dev",
+    "support": {
+        "source": "https://github.com/systonia/Tenma-Stubs",
+        "issues": "https://github.com/systonia/Tenma-Stubs/issues"
+    },
     "authors": [
         {
             "name": "Lento Leisenfeld",
