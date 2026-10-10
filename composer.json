@@ -1,0 +1,20 @@
+{
+    "name": "systonia/tenma-stubs",
+    "description": "Stubs of Tenma's PHP API (Tenma::serve(), Tenma\\Http, Tenma\\Fs, ...) for IDEs and PHPStan",
+    "type": "library",
+    "keywords": ["tenma", "stubs", "ide-helper", "phpstan", "async", "fibers"],
+    "authors": [
+        {
+            "name": "Lento Leisenfeld",
+            "email": "lento@leisenfeld.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.5"
+    },
+    "extra": {
+        "phpstan": {
+            "includes": ["extension.neon"]
+        }
+    }
+}

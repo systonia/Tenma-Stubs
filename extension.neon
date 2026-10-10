@@ -1,0 +1,5 @@
+# Lets PHPStan know Tenma's API. Included automatically with phpstan/extension-installer,
+# otherwise add vendor/systonia/tenma-stubs/extension.neon to "includes" in your phpstan.neon.
+parameters:
+    scanFiles:
+        - tenma.php
