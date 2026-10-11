@@ -60,6 +60,12 @@ namespace {
         public static function detach(callable $work): \Tenma\Task {}
 
         /**
+         * Stops here when an editor is connected to tenma --inspect, like `debugger;` in JavaScript
+         * or xdebug_break(). Does nothing otherwise.
+         */
+        public static function debugger(): void {}
+
+        /**
          * Waits without blocking the server. Other requests keep running.
          */
         public static function sleep(float $seconds): void {}
@@ -151,6 +157,29 @@ namespace Tenma {
 
         /** An empty directory; with $recursive, also with its contents. */
         public static function removeDir(string $path, bool $recursive = false): void {}
+    }
+
+    /**
+     * A build step for `tenma --watch` and `tenma build`, returned in a list from tenma.dev.php
+     * next to the script, like the plugins of a Vite config. Runs once at startup and again
+     * whenever a file matching $inputs changes. $run is PHP code or a command: a list of program
+     * and arguments (an array is always a command) that Tenma starts as a process of its own,
+     * without a shell, in the directory of tenma.dev.php.
+     *
+     * Tenma orders the hooks by their files: a hook reading what another one writes runs after it.
+     */
+    final readonly class Hook
+    {
+        /** @var \Closure(list<string>): mixed|list<string> */
+        public protected(set) readonly \Closure|array $run;
+
+        /**
+         * @param list<string> $inputs globs relative to tenma.dev.php: * and ? within a name, ** across directories
+         * @param (callable(list<string> $changed): mixed)|list<string> $run PHP code gets the changed paths, empty on the first run
+         * @param list<string> $outputs files $run writes; they never trigger this hook again
+         * @param ?string $name for log lines, default: the program's file name or "#N" (the position in the list)
+         */
+        public function __construct(public protected(set) readonly array $inputs, callable|array $run, public protected(set) readonly array $outputs = [], public protected(set) readonly ?string $name = null) {}
     }
 
     /**
