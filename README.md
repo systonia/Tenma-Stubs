@@ -5,7 +5,7 @@ Stubs of [Tenma](https://github.com/systonia/Tenma)'s PHP API for IDEs and PHPSt
 Tenma embeds its PHP API (`Tenma::serve()`, `Tenma::async()`, `Tenma\Http\Request`, `Tenma\Fs`, ...) in its binary, so IDEs and static analysis don't know it on their own. This package describes it: signatures and doc comments, empty bodies.
 
 ```bash
-composer require --dev systonia/tenma-stubs
+composer require --dev tenma/stubs
 ```
 
 - **PhpStorm, Intelephense:** pick up `tenma.php` from `vendor/`, nothing else to do.
@@ -13,7 +13,7 @@ composer require --dev systonia/tenma-stubs
 
   ```neon
   includes:
-      - vendor/systonia/tenma-stubs/extension.neon
+      - vendor/tenma/stubs/extension.neon
   ```
 
 The stubs are never autoloaded, so nothing changes at runtime: under Tenma the real classes are there, under FPM there is no `Tenma` class. Code that runs under both checks with `class_exists(Tenma::class)`.

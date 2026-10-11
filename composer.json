@@ -1,5 +1,5 @@
 {
-    "name": "systonia/tenma-stubs",
+    "name": "tenma/stubs",
     "description": "Stubs of Tenma's PHP API (Tenma::serve(), Tenma\\Http, Tenma\\Fs, ...) for IDEs and PHPStan",
     "type": "library",
     "keywords": ["tenma", "stubs", "ide-helper", "phpstan", "async", "fibers"],
