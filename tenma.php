@@ -392,7 +392,7 @@ namespace Tenma\Http {
          * after it. The Fiber waits when the client cannot keep up.
          *
          * @param callable(Stream): void $writer
-         * @param array<string, string> $headers
+         * @param array<string, string|list<string>> $headers several values as a list, for example for Set-Cookie
          */
         public static function stream(callable $writer, int $status = 200, array $headers = ['content-type' => 'application/octet-stream']): \Tenma\Http\StreamedResponse {}
 
@@ -421,7 +421,7 @@ namespace Tenma\Http {
 
     final class StreamedResponse
     {
-        /** @param array<string, string> $headers */
+        /** @param array<string, string|list<string>> $headers several values as a list, for example for Set-Cookie */
         public function __construct(public protected(set) readonly \Closure $writer, public protected(set) readonly int $status, public protected(set) readonly array $headers) {}
     }
 
