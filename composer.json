@@ -3,7 +3,7 @@
     "description": "Stubs of Tenma's PHP API (Tenma::serve(), Tenma\\Http, Tenma\\Fs, ...) for IDEs and PHPStan",
     "type": "library",
     "keywords": ["tenma", "stubs", "ide-helper", "phpstan", "async", "fibers"],
-    "license": "MIT",
+    "license": ["MIT", "Apache-2.0"],
     "homepage": "https://tenma.dev",
     "support": {
         "source": "https://github.com/systonia/Tenma-Stubs",

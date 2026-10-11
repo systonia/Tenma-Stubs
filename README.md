@@ -28,4 +28,4 @@ tenma --stubs > tenma.php
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+MIT or Apache-2.0, at your option: [LICENSE-MIT](LICENSE-MIT), [LICENSE-APACHE](LICENSE-APACHE).
