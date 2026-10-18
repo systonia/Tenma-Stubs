@@ -8,7 +8,7 @@ Tenma embeds its PHP API (`Tenma::serve()`, `Tenma::async()`, `Tenma\Http\Reques
 composer require --dev tenma/stubs
 ```
 
-- **PhpStorm, Intelephense:** pick up `tenma.php` from `vendor/`, nothing else to do.
+- **PhpStorm, Intelephense, PHP Tools:** pick up `src/` from `vendor/`, nothing else to do. One file per class, in folders by namespace.
 - **PHPStan:** with [`phpstan/extension-installer`](https://github.com/phpstan/extension-installer) the package's `extension.neon` is included automatically. Without it:
 
   ```neon
@@ -20,10 +20,10 @@ The stubs are never autoloaded, so nothing changes at runtime: under Tenma the r
 
 ## Updating
 
-`tenma.php` is generated, don't edit it. With a Tenma binary of the version you want:
+`src/` is generated, don't edit it. Every Tenma release regenerates it. By hand, with a Tenma binary of the version you want:
 
 ```bash
-tenma --stubs > tenma.php
+rm -rf src && tenma --stubs src
 ```
 
 ## License
