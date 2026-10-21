@@ -1,6 +1,6 @@
 {
     "name": "tenma/stubs",
-    "description": "Stubs of Tenma's PHP API (Tenma::serve(), Tenma\\Http, Tenma\\Fs, ...) for IDEs and PHPStan",
+    "description": "Stubs of Tenma's PHP API (Http\\Server, Threading\\Task, FileSystem, Data, ...) for IDEs and PHPStan",
     "type": "library",
     "keywords": ["tenma", "stubs", "ide-helper", "phpstan", "async", "fibers"],
     "license": ["MIT", "Apache-2.0"],
