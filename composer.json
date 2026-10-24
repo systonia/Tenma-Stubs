@@ -6,8 +6,8 @@
     "license": ["MIT", "Apache-2.0"],
     "homepage": "https://tenma.dev",
     "support": {
-        "source": "https://github.com/systonia/Tenma-Stubs",
-        "issues": "https://github.com/systonia/Tenma-Stubs/issues"
+        "source": "https://github.com/tenma-runtime/stubs",
+        "issues": "https://github.com/tenma-runtime/stubs/issues"
     },
     "authors": [
         {

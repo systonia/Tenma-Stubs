@@ -1,6 +1,6 @@
 # Tenma Stubs
 
-Stubs of [Tenma](https://github.com/systonia/Tenma)'s PHP API for IDEs and PHPStan.
+Stubs of [Tenma](https://github.com/tenma-runtime/tenma)'s PHP API for IDEs and PHPStan.
 
 Tenma embeds its PHP API (`Http\Server`, `Http\Request`, `Threading\Task`, `FileSystem\FileInfo`, `Data\Postgres`, ...) in its binary, so IDEs and static analysis don't know it on their own. This package describes it: signatures and doc comments, empty bodies.
 
